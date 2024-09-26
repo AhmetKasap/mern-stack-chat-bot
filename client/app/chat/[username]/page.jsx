@@ -83,7 +83,7 @@ const page = ({ params }) => {
     <>
       <Navbar></Navbar>
 
-      <div className='flex flex-col gap-4    border-2 xsm:w-10/12 sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-1/2 outline-none border-green-700 mx-auto mt-12 h-[70vh] rounded-md p-8'>
+      <div className='flex flex-col   border-2 xsm:w-10/12 sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-1/2 outline-none border-green-700 mx-auto mt-12 h-[70vh] rounded-md p-8'>
         <div className='overflow-y-scroll p-4'>
 
           {
@@ -93,7 +93,7 @@ const page = ({ params }) => {
                 <div className='flex flex-col items-end'>
                   <p className=' border p-2 rounded-lg border-green-700 text-green-500'> {chat.userMessage} </p>
                 </div>
-                <div className='flex '>
+                <div className='flex mt-4 mb-4'>
                  <p className=' border p-2 rounded-lg border-gray-700 text-white'> {chat.botMessage} </p>
                 </div>
             </div>
@@ -108,7 +108,7 @@ const page = ({ params }) => {
                     <div className='flex flex-col items-end'>
                       <p className=' border p-2 rounded-lg border-green-700 text-green-500'> {message.userMessage} </p>
                     </div>
-                    <div className='flex '>
+                    <div className='flex mt-4 mb-4'>
                      <p className=' border p-2 rounded-lg border-gray-700 text-white '> {message.botMessage} </p>
                     </div>
                 </div>

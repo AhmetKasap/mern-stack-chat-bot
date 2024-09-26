@@ -2,6 +2,13 @@ const userModel = require('../models/user.model')
 const chatModel = require('../models/chat.model')
 const APIError = require('../utils/Error')
 const Response = require('../utils/Response')
+const { CohereClient } = require("cohere-ai")
+require('dotenv').config()
+
+const cohere = new CohereClient({
+    token: process.env.COHERE_KEY,
+})
+
 
 const createChat = async(req,res) => {
     const user = req.authUser
@@ -11,16 +18,19 @@ const createChat = async(req,res) => {
     if(!findUser) throw new APIError('user not found in db', 404)
     
     //chat bot 
-    const botMessage = "test"
+    const chatBotResponse = await cohere.chat({
+        message : userMessage
+    })
+    if(!chatBotResponse) throw new APIError('chat bot error',500)
 
     const newChatModel = new chatModel({
         userMessage : userMessage,
-        botMessage : botMessage,
+        botMessage : chatBotResponse.text,
         userRef : findUser._id
     })
     const response = await newChatModel.save()
     if(!response) throw new APIError('db error', 500)
-    return new Response(botMessage, 'successful request').ok(res)
+    return new Response(chatBotResponse.text, 'successful request').ok(res)
 
 
 }
@@ -37,6 +47,11 @@ const getChat = async(req,res) => {
 
     
 }
+
+
+
+
+
 
 module.exports = {
     createChat,
