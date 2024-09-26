@@ -74,7 +74,7 @@ const Auth = () => {
                 <input value={password} onChange={(e) => setPassword(e.target.value)} id='password' type='password' className='h-8 w-full text-sm border rounded-md outline-none p-2'/> 
   
                 <button onClick={() => login()} className='border p-3 rounded-lg text-white bg-green-500 hover:bg-green-600 w-24 mt-2'>Log In</button>
-                <button onClick={() => setControl(false)} className='text-center text-gray-500 text-sm underline-offset-1'>Sign In</button>
+                <button onClick={() => setControl(false)} className='text-center text-gray-500 text-sm underline-offset-1'>Sign Up</button>
               </div>
             </div>
 
