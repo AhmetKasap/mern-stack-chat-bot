@@ -4,9 +4,9 @@ Backend : Nodej.s, Express.js, MongoDB
 
 TO RUN THE CLIENT ;
 
-cd client
-npm i
-npm run dev
++ cd client
++ npm i
++ npm run dev
 
 TO RUN THE SERVER ;
 + cd server
