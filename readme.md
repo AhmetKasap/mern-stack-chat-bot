@@ -11,11 +11,11 @@ npm run dev
 TO RUN THE SERVER ;
 + cd server
 + npm i
-+ create .env 
-    MONGODB_CONNECTION_URL=mongodb://localhost:27017/chat-bot
-    JWT_SECRET=asdsadqwelk12öm3ç,isad*?123asd12lk3möcnmöxzcidsş 
-    JWT_EXPIRES_IN=7d
-    COHERE_KEY=buy tokens at this address :"https://dashboard.cohere.com/welcome/login"
++ create .env
+    + MONGODB_CONNECTION_URL=mongodb://localhost:27017/chat-bot
+    + JWT_SECRET=asdsadqwelk12öm3ç,isad*?123asd12lk3möcnmöxzcidsş 
+    + JWT_EXPIRES_IN=7d
+    + COHERE_KEY=buy tokens at this address :"https://dashboard.cohere.com/welcome/login"
 + npm start
 
 
