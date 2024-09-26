@@ -15,7 +15,7 @@ TO RUN THE SERVER ;
     + MONGODB_CONNECTION_URL=mongodb://localhost:27017/chat-bot
     + JWT_SECRET=asdsadqwelk12öm3ç,isad*?123asd12lk3möcnmöxzcidsş 
     + JWT_EXPIRES_IN=7d
-    + COHERE_KEY=buy tokens at this address :"https://dashboard.cohere.com/welcome/login"
+    + COHERE_KEY=Huk4svdLtiEvkiP4eLivG9ty0w49WNTYuaAppsFq
 + npm start
 
 
